@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/favFragment">
+
+    <fragment
+        android:id="@+id/favFragment"
+        android:name="com.daviddam.bottomnavigationviewdavidgelma.FavFragment"
+        android:label="fragment_fav"
+        tools:layout="@layout/fragment_fav" />
+    <fragment
+        android:id="@+id/musicFragment"
+        android:name="com.daviddam.bottomnavigationviewdavidgelma.MusicFragment"
+        android:label="fragment_music"
+        tools:layout="@layout/fragment_music" />
+    <fragment
+        android:id="@+id/placesFragment"
+        android:name="com.daviddam.bottomnavigationviewdavidgelma.PlacesFragment"
+        android:label="fragment_places"
+        tools:layout="@layout/fragment_places" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.daviddam.bottomnavigationviewdavidgelma.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" />
+</navigation>
