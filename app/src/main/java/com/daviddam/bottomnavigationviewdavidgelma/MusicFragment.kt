@@ -1,10 +1,12 @@
 package com.daviddam.bottomnavigationviewdavidgelma
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +35,17 @@ class MusicFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_music, container, false)
+        val view = inflater.inflate(R.layout.fragment_music, container, false)
+        val sharedPref = requireActivity().getSharedPreferences(
+            getString(R.string.key_SP), Context.MODE_PRIVATE
+        )
+        val name = sharedPref.getString(getString(R.string.key_name), "")
+        val age = sharedPref.getInt(getString(R.string.key_age), 0)
+
+        Toast.makeText(context, "Nom: $name / Edat: $age", Toast.LENGTH_LONG).show()
+
+        return view
+
     }
 
     companion object {

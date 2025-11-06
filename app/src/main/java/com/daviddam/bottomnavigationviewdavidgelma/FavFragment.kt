@@ -1,5 +1,7 @@
 package com.daviddam.bottomnavigationviewdavidgelma
 
+
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -34,7 +36,17 @@ class FavFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fav, container, false)
+        val view = inflater.inflate(R.layout.fragment_fav, container, false)
+
+        val sharedPref = activity?.getSharedPreferences(
+            getString(R.string.key_SP), Context.MODE_PRIVATE
+        )
+        sharedPref?.edit()?.apply {
+            putString(getString(R.string.key_name), "David")
+            putInt(getString(R.string.key_age), 18)
+            apply()
+        }
+        return view
     }
 
     companion object {

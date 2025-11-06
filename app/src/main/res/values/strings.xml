@@ -2,4 +2,11 @@
     <string name="app_name">BottomNavigationViewDavidGelma</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--AFEGIT -->
+    <string name="nav_open">Obert</string>
+    <string name="nav_close">Tancat</string>
+    <string name="key_SP">key_SP</string>
+    <string name="key_name">key_name</string>
+    <string name="key_age">key_age</string>
+
 </resources>
